@@ -1,0 +1,14 @@
+<h1>Welcome to Greetings App!</h1>
+<strong>Your Local Time is:</strong>
+<%= time_tag Time.now, "data-local": "time", "data-format": "%B %e, %Y %l:%M %P" %>
+
+<p></p>
+
+<div data-controller="greeting">
+  <label for="name">Enter your name:</label>
+  <input id="name" data-greeting-target="name" type="text" placeholder="Your name">
+
+  <button data-action="click->greeting#greet">Greet Me</button>
+
+  <p data-greeting-target="output" style="margin-top: 20px;"></p>
+</div>
